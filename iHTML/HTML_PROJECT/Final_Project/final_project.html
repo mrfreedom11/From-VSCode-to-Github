@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>for final project </title>
+  <style>
+    
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      margin: 0;
+      line-height: 1.5;
+      background: #faf7f0;
+      color: #222;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      background: linear-gradient(90deg, #ffd89b, #19547b);
+      color: rgb(176, 27, 27);
+    }
+    #header-img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 2px solid rgba(255,255,255,0.6);
+    }
+    nav {
+      margin-left: auto;
+      display: flex;
+      gap: 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      background: rgba(255,255,255,0.12);
+      padding: 0.4rem 0.6rem;
+      border-radius: 6px;
+    }
+    main {
+      max-width: 1000px;
+      margin: 1.5rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+    article {
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #eee;
+      display: flex;
+      flex-direction: column;
+      background: #fffaf6;
+    }
+    article img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      display: block;
+    }
+    article .card-body {
+      padding: 0.75rem;
+    }
+    article h3 {
+      margin: 0 0 0.4rem 0;
+    }
+    article p {
+      margin: 0;
+      color: #444;
+    }
+    form .form-row {
+      display: flex;
+      gap: .75rem;
+      align-items: center;
+      margin-bottom: 0.75rem;
+    }
+    label {
+      min-width: 140px;
+      font-weight: 600;
+    }
+    input[type="number"] {
+      width: 80px;
+      padding: 0.35rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    .addons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.75rem;
+    }
+    textarea {
+      width: 100%;
+      min-height: 80px;
+      padding: .5rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      resize: vertical;
+    }
+    .submit-row {
+      text-align: right;
+    }
+    input[type="submit"] {
+      background: #19547b;
+      color: white;
+      padding: 0.6rem 1rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #666;
+    }
+    em { color: #b03030; } /* price emphasis */
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Header image with required id -->
+    <img id="header-img" src="c:\Users\HP\Downloads\How to Draw Pizza Steve.jpg" alt="USELESS PIC">
+
+    <!-- Restaurant name -->
+    <h1>For final project</h1>
+
+    <!-- Navigation with headings/links for #menu and #order-form -->
+    <nav aria-label="Main navigation">
+      <a href="#menu">menu</a>
+      <a href="#order-form">order-form</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Menu section -->
+    <section id="menu" aria-labelledby="menu-heading">
+      <h2 id="menu-heading">Menu</h2>
+
+      <div class="menu-grid">
+        <!-- 1st meal -->
+        <article>
+          <img src="c:\Users\HP\Downloads\Pixilart - Burger.jpg>" alt="Avocado Toast">
+          <div class="card-body">
+            <h3>Pixelled burger</h3>
+            <p>Very tasty burger come from a gameland <em>999.9$</em></p>
+          </div>
+        </article>
+
+        <!-- 2nd meal -->
+        <article>
+          <img src="" alt="Eggs Benedict">
+          <div class="card-body">
+            <h3>Something</h3>
+            <p>not very much delicious <em>-300$</em></p>
+            <p>(I HAVE SOME KNOWLEDGE ABOUT HTML AND HELLO FROM UZBEKISTAN TO CODEDEX DEVS)</p>
+          </div>
+        </article>
+
+        <!-- 3rd mealo -->
+        <article>
+          <img src="c:\Users\HP\Downloads\download.jpg' alt="Berry Pancakes">
+          <div class="card-body">
+            <h3>Cockember Rickk</h3>
+            <p>Funny Rick turned himself into a Cuckember<em>$999999999</em></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Order form section -->
+    <section id="order-form" aria-labelledby="order-heading">
+      <h2 id="order-heading">Place Your Order</h2>
+
+      <form action="/checkout" method="POST" aria-describedby="order-instructions">
+        <p id="order-instructions">Select quantities for each item, choose sides/add-ons, add special requests, then go to checkout.</p>
+
+        <!-- Number inputs for each menu item -->
+        <div class="form-row">
+          <label for="qty-avotoast">pixel burger</label>
+          <input id="qty-avotoast" name="avotoast_qty" type="number" min="0" value="0" />
+        </div>
+
+        <div class="form-row">
+          <label for="qty-eggsben">Something terrible</label>
+          <input id="qty-eggsben" name="eggsben_qty" type="number" min="0" value="0" />
+        </div>
+
+        <div class="form-row">
+          <label for="qty-pancakes">cucember rickk</label>
+          <input id="qty-pancakes" name="pancakes_qty" type="number" min="0" value="0" />
+        </div>
+
+        <!-- Radio / Checkbox inputs for sides and add-ons -->
+        <fieldset>
+          <legend>Choose a side (pick one)</legend>
+          <div class="form-row">
+            <label for="side-none">No side</label>
+            <input id="side-none" type="radio" name="side" value="none" checked>
+          </div>
+          <div class="form-row">
+            <label for="side-fruit">have side</label>
+            <input id="side-fruit" type="radio" name="side" value="fruit">
+          </div>
+          <div class="form-row">
+            <label for="side-salad">big side</label>
+            <input id="side-salad" type="radio" name="side" value="salad">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Add-ons </legend>
+          <div class="addons">
+            <div>
+              <input id="addon-bacon" type="checkbox" name="addons" value="bacon">
+              <label for="addon-bacon">nothing</label>
+            </div>
+            <div>
+              <input id="addon-avocado" type="checkbox" name="addons" value="extra_avocado">
+              <label for="addon-avocado">brick</label>
+            </div>
+            <div>
+              <input id="addon-syrup" type="checkbox" name="addons" value="maple_syrup">
+              <label for="addon-syrup">love</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Textarea for special requests -->
+        <div class="form-row" style="flex-direction: column; align-items: flex-start;">
+          <label for="special-requests">Special requests (allergies, prep notes)(we don't care anyway)</label>
+          <textarea id="special-requests" name="special_requests" placeholder="Write any special requests here..."></textarea>
+        </div>
+
+        <!-- Submit -->
+        <div class="submit-row">
+          <input type="submit" value="Go To Checkout">
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with love by MR.FREEDOM</p>
+  </footer>
+</body>
+</html>
